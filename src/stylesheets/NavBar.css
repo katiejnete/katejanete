@@ -1,0 +1,10 @@
+.navbar-logo {
+    width: 150px;
+    height: auto;
+    display: flex;
+}
+
+.navbar a {
+    display: block;
+    text-align: left;
+}

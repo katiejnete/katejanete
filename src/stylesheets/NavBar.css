@@ -4,7 +4,30 @@
     display: flex;
 }
 
-.navbar a {
-    display: block;
+.navbar-hamburger img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.navbar-links li {
+    list-style: none;
     text-align: left;
+    transition: color 0.3 ease;
+
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.navbar-links.open li {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.navbar button {
+    width: 30px;
+    height: 30px;
 }

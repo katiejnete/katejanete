@@ -1,0 +1,32 @@
+.card {
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.card-text {
+    position: absolute;
+    text-align: left;
+    padding: 20px;
+    bottom: 10px;
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.card-text h2 {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+@media (min-width: 1060px) {
+    .card {
+        width: 50vw;
+    }
+}

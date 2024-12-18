@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Card from "./Card/Card";
-import featuredImg from "../assets/twice-screenshot.png";
+import twiceHome from "../assets/twice-home.png";
+import twiceListing from "../assets/twice-listing.png";
 import "../stylesheets/Home.css";
 
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
         See All Projects
       </Link>
       <div className="card-list">
-        <Card cardClass="home-featured" title={title} text={text} image={featuredImg}/>
+        <Card cardClass="home-featured" title={title} text={text} firstImg={twiceListing} secondImg={twiceHome} />
       </div>
     </div>
   );

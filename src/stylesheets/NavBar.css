@@ -2,7 +2,7 @@
     left: 0;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     margin: 0;
     display: flex;
     flex-direction: row;
@@ -48,6 +48,7 @@
     background-color: #8a8a8a;
     transform: translateY(100%);
     position: fixed;
+    z-index: 2;
 }
 
 .navbar-links.open, .navbar-links.open li {

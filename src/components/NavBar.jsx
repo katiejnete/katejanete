@@ -11,7 +11,7 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
-      <NavLink to="/">
+      <NavLink onClick={toggleMenu} to="/">
         <img className="navbar-logo" src={logo} alt="Kate Janete Logo" />
       </NavLink>
 

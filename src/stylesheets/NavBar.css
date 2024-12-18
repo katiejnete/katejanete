@@ -1,13 +1,31 @@
-.navbar-logo {
-    width: 150px;
-    height: auto;
+.navbar {
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 10px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
 }
 
 .navbar-hamburger img {
     width: 20px;
     height: 20px;
     cursor: pointer;
+    align-self: flex-start;
+    order: 1;
+}
+
+.navbar-logo {
+    width: 150px;
+    height: auto;
+    order: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-75%);
 }
 
 .navbar-links li {

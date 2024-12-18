@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 import hamburger from "../assets/hamburger.png";
+import x from "../assets/x.png";
 import "../stylesheets/NavBar.css";
 
 const NavBar = () => {
@@ -13,7 +14,7 @@ const NavBar = () => {
       <img className="navbar-logo" src={logo} alt="Kate Vong Logo" />
 
       <div className="navbar-hamburger" onClick={toggleMenu}>
-        <img src={hamburger} alt="" />
+        <img src={isOpen ? x : hamburger} alt="" />
       </div>
 
       <ul className={`navbar-links ${isOpen ? "open" : ""}`}>

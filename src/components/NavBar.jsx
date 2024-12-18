@@ -11,27 +11,29 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
-      <img className="navbar-logo" src={logo} alt="Kate Vong Logo" />
+      <NavLink to="/">
+        <img className="navbar-logo" src={logo} alt="Kate Janete Logo" />
+      </NavLink>
 
       <div className="navbar-hamburger" onClick={toggleMenu}>
-        <img src={isOpen ? x : hamburger} alt="" />
+        <img src={isOpen ? x : hamburger} alt="hamburger menu toggle" />
       </div>
 
       <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
         <li>
-          <NavLink to="/about">About Me</NavLink>
+          <NavLink onClick={toggleMenu} to="/about">About Me</NavLink>
         </li>
         <li>
-          <NavLink to="/experience">Relevant Experience</NavLink>
+          <NavLink onClick={toggleMenu} to="/experience">Relevant Experience</NavLink>
         </li>
         <li>
-          <NavLink to="/projects">Projects</NavLink>{" "}
+          <NavLink onClick={toggleMenu} to="/projects">Projects</NavLink>{" "}
         </li>
         <li>
-          <NavLink to="/skills">Skills</NavLink>
+          <NavLink onClick={toggleMenu} to="/skills">Skills</NavLink>
         </li>
         <li>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink onClick={toggleMenu} to="/contact">Contact</NavLink>
         </li>
         {/* <NavLink to="/playground">Playground</NavLink> */}
       </ul>

@@ -8,10 +8,11 @@ import "../stylesheets/NavBar.css";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
+  const hideMenu = () => setIsOpen(false);
 
   return (
     <nav className="navbar">
-      <NavLink onClick={toggleMenu} to="/">
+      <NavLink onClick={hideMenu} to="/">
         <img className="navbar-logo" src={logo} alt="Kate Janete Logo" />
       </NavLink>
 
@@ -21,19 +22,19 @@ const NavBar = () => {
 
       <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
         <li>
-          <NavLink onClick={toggleMenu} to="/about">About Me</NavLink>
+          <NavLink onClick={hideMenu} to="/about">About Me</NavLink>
         </li>
         <li>
-          <NavLink onClick={toggleMenu} to="/experience">Relevant Experience</NavLink>
+          <NavLink onClick={hideMenu} to="/experience">Relevant Experience</NavLink>
         </li>
         <li>
-          <NavLink onClick={toggleMenu} to="/projects">Projects</NavLink>{" "}
+          <NavLink onClick={hideMenu} to="/projects">Projects</NavLink>{" "}
         </li>
         <li>
-          <NavLink onClick={toggleMenu} to="/skills">Skills</NavLink>
+          <NavLink onClick={hideMenu} to="/skills">Skills</NavLink>
         </li>
         <li>
-          <NavLink onClick={toggleMenu} to="/contact">Contact</NavLink>
+          <NavLink onClick={hideMenu} to="/contact">Contact</NavLink>
         </li>
         {/* <NavLink to="/playground">Playground</NavLink> */}
       </ul>

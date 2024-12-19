@@ -31,9 +31,6 @@ const NavBar = () => {
           <NavLink onClick={hideMenu} to="/projects">Projects</NavLink>{" "}
         </li>
         <li>
-          <NavLink onClick={hideMenu} to="/skills">Skills</NavLink>
-        </li>
-        <li>
           <NavLink onClick={hideMenu} to="/contact">Contact</NavLink>
         </li>
         {/* <NavLink to="/playground">Playground</NavLink> */}

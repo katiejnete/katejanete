@@ -1,21 +1,23 @@
 .projects {
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .card.projects {
     padding: 0;
-    margin: 10px auto;
     width: 100%;
     box-sizing: border-box;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 @media (min-width: 768px) {
     .card.projects {
       width: 45%;
-    }
-
-    .card-list.projects {
-        display: flex;
-
     }
   }

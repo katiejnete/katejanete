@@ -19,9 +19,11 @@ const Home = () => {
           See All Projects
         </Link>
       </div>
-      <div className="card-list">
+      <div className="home-featured">
         <h2>Featured</h2>
-        <Card cardClass="home-featured" project={projects[0]} />
+        <div className="card-list">
+          <Card cardClass="home-featured" project={projects[0]} />
+        </div>
       </div>
     </div>
   );

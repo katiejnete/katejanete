@@ -43,11 +43,6 @@ h2, p {
     box-sizing: border-box;
 }
 
-.home-intro {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .card-list {
    display: flex;
    justify-content: center;

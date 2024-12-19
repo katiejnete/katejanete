@@ -30,10 +30,14 @@
 }
 
 .card-list {
-    display: flex;
     margin-top: 40px;
 }
 
 .card.home-featured {
     padding: 0;
+}
+
+h2, p {
+    font-weight: 500; 
+    text-align: left;
 }

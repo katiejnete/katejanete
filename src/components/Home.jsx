@@ -10,16 +10,29 @@ const Home = () => {
   facilitate mutual aid by tracking free items available 
   within the user's vicinity. Built with React and Node.js,
   this platform helps reduce landfill waste and curb 
-  over-consumption by connecting people with surplus items to those in need.`
+  over-consumption by connecting people with surplus items to those in need.`;
 
   return (
     <div className="home">
-      <p>Full-Stack Software Engineer</p>
-      <Link id="home-cta" to="/projects">
-        See All Projects
-      </Link>
+      <div className="home-intro">
+        <h2>Full-Stack Software Engineer</h2>
+        <p>
+          AI & Machine Learning Enthusiast ⋅ Python ⋅ Node.js ⋅ SQL ⋅ React ⋅
+          APIs ⋅ Social Impact & Tech Innovation
+        </p>
+        <Link id="home-cta" to="/projects">
+          See All Projects
+        </Link>
+      </div>
       <div className="card-list">
-        <Card cardClass="home-featured" title={title} text={text} firstImg={twiceListing} secondImg={twiceHome} />
+        <h2>Featured</h2>
+        <Card
+          cardClass="home-featured"
+          title={title}
+          text={text}
+          firstImg={twiceListing}
+          secondImg={twiceHome}
+        />
       </div>
     </div>
   );

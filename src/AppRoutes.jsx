@@ -9,6 +9,8 @@ import Contact from "./components/Contact";
 import NotFound from "./components/NotFound";
 import twiceListing from "./assets/twice-listing.png";
 import twiceHome from "./assets/twice-home.png";
+import skinHome from "./assets/skin-home.png";
+import skinRecs from "./assets/skin-recs.png";
 import ProjectsContext from "./context/ProjectsContext";
 
 const AppRoutes = () => {
@@ -22,7 +24,7 @@ const AppRoutes = () => {
       this platform helps reduce landfill waste and curb 
       over-consumption by connecting people with surplus items to those in need.`,
       images: [twiceListing, twiceHome],
-      techStack: ["Node.js", "React"],
+      techStack: ["React.js", "Node.js", "Express.js", "Leaflet", "PostgreSQL"],
       features: [
         "Users can list items with title, description, category, condition, and images.",
         "Simultaneously filter and sort listings based on category, condition, and location.",
@@ -30,14 +32,23 @@ const AppRoutes = () => {
         "Geolocation features to map item locations.",
         "Save favorite listings for easy access.",
       ],
-      links: ["https://twiceloved-frontend.onrender.com/", "github.com"],
+      links: ["https://twiceloved-frontend.onrender.com/", "github.com/"],
     },
     {
       name: "edu-skin",
       title: "EduSkin: Your Personalized Skincare Companion",
       text: `EduSkin is a web application that allows users to access reliable data about cosmetic products. Built with Flask, it empowers consumers by providing ingredient insights and tailored skincare product recommendations, making informed decisions effortless.`,
-      images: [twiceListing, twiceHome],
-      techStack: ["Flask", "Python", "Scikit-learn", "BeautifulSoup"],
+      images: [skinHome, skinRecs],
+      techStack: [
+        "Scikit-learn",
+        "K-Nearest Neighbors",
+        "Flask",
+        "Python",
+        "PostgreSQL",
+        "pandas",
+        "Selenium",
+        "Beautiful Soup",
+      ],
       features: [
         "Search and sort products by reviews, price, rating, and safety scores.",
         "Access detailed product pages with ingredient breakdowns and scores.",
@@ -45,7 +56,7 @@ const AppRoutes = () => {
         "Receive personalized skincare product recommendations.",
         "Submit new products for review and inclusion.",
       ],
-      links: ["https://eduskin-frontend.onrender.com/", "github.com"],
+      links: ["https://eduskin.onrender.com/", "github.com/"],
     },
   ];
 

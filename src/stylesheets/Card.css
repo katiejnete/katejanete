@@ -35,6 +35,20 @@
     margin-top: 0px;
 }
 
+@media (min-width: 320px) {
+    .card {
+        width: 100%;
+    }
+
+    .card-text {
+        font-size: 2vw;
+    }
+
+    .card-text h2 {
+        font-size: 2.5vw;
+    }
+}
+
 @media (min-width: 767px) {
     .card {
         width: 50vw;
@@ -46,5 +60,15 @@
 
     .card-text h2 {
         font-size: 1.5vw;
+    }
+}
+
+@media (min-width: 1060px) {
+    .card-text {
+        font-size: 1vw;
+    }
+
+    .card-text h2 {
+        font-size: 1.25vw;
     }
 }

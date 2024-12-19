@@ -5,5 +5,10 @@
 .project img {
     width: 45%;
     height: auto;
-    margin: 1px;
+    margin: 10px;
+}
+
+.project-images {
+    display: flex;
+    justify-content: center;
 }

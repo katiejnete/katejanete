@@ -15,9 +15,11 @@ const ProjectPage = () => {
       <div className="project-intro">
         <h1>{title}</h1>
         <p>{text}</p>
-        {images.map((image) => (
-          <img src={image} alt={image} />
-        ))}
+        <div className="project-images">
+          {images.map((image) => (
+            <img src={image} alt={image} />
+          ))}
+        </div>
       </div>
 
       <div className="project-tech-stack">

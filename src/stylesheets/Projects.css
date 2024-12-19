@@ -1,0 +1,21 @@
+.projects {
+    width: 100%;
+}
+
+.card.projects {
+    padding: 0;
+    margin: 10px auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .card.projects {
+      width: 45%;
+    }
+
+    .card-list.projects {
+        display: flex;
+
+    }
+  }

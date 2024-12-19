@@ -12,6 +12,7 @@ import twiceHome from "./assets/twice-home.png";
 import skinHome from "./assets/skin-home.png";
 import skinRecs from "./assets/skin-recs.png";
 import ProjectsContext from "./context/ProjectsContext";
+import ExperienceContext from "./context/ExperienceContext";
 
 const AppRoutes = () => {
   const projects = [
@@ -59,20 +60,54 @@ const AppRoutes = () => {
       links: ["https://eduskin.onrender.com/", "github.com/"],
     },
   ];
+  const experiences = [
+    {
+      role: "Volunteer Front-End Developer",
+      company: "Hack for LA, Remote",
+      timeline: "Nov 2024 - Present",
+      skills: [
+        "Collaborate with cross-functional teams to develop civic-focused open-source projects, contributing full-stack expertise to improve community outcomes.",
+        "Implement back-end services containerized with Docker for efficient development and deployment.",
+        "Conduct code reviews, manage GitHub repositories, and ensure adherence to best practices for clean, maintainable code.",
+        "Actively participate in Agile-style sprints, improving collaboration and project progress tracking.",
+      ],
+    },
+    {
+      role: "Full-Stack Software Developer Fellow",
+      company: "Springboard, Remote",
+      timeline: "Dec 2023 - Oct 2024",
+      skills: [
+        "Completed over 700 hours of hands-on coursework with 1:1 expert mentor oversight, focusing on building scalable, production-ready applications.",
+        "Developed end-to-end projects utilizing Python, Flask, React, and SQLAlchemy, following the full software development lifecycle.",
+        "Gained expertise in debugging, testing, and implementing best practices in both front-end and back-end development.",
+      ],
+    },
+    {
+      role: "Coding Instructor",
+      company: "Sigma Coding, Alhambra, CA",
+      timeline: "Jan 2019 - Jun 2019",
+      skills: [
+        "Taught programming fundamentals to elementary students using visual languages such as Snap! and Scratch, fostering early interest in technology.",
+        "Simplified complex coding concepts into engaging, age-appropriate lessons to ensure student comprehension and engagement.",
+      ],
+    },
+  ];
 
   return (
     <ProjectsContext.Provider value={{ projects }}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/:name" element={<ProjectPage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-        {/* <Route path="/playground" /> */}
-      </Routes>
+      <ExperienceContext.Provider value={{ experiences }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:name" element={<ProjectPage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+          {/* <Route path="/playground" /> */}
+        </Routes>
+      </ExperienceContext.Provider>
     </ProjectsContext.Provider>
   );
 };

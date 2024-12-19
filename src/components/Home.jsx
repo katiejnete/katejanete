@@ -1,16 +1,11 @@
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Card from "./Card/Card";
-import twiceHome from "../assets/twice-home.png";
-import twiceListing from "../assets/twice-listing.png";
+import ProjectsContext from "../context/ProjectsContext";
 import "../stylesheets/Home.css";
 
 const Home = () => {
-  const title = "TwiceLoved: A Platform for Sharing Surplus Items";
-  const text = `TwiceLoved is a web application designed to
-  facilitate mutual aid by tracking free items available 
-  within the user's vicinity. Built with React and Node.js,
-  this platform helps reduce landfill waste and curb 
-  over-consumption by connecting people with surplus items to those in need.`;
+  const { projects } = useContext(ProjectsContext);
 
   return (
     <div className="home">
@@ -20,19 +15,13 @@ const Home = () => {
           AI & Machine Learning Enthusiast ⋅ Python ⋅ Node.js ⋅ SQL ⋅ React ⋅
           APIs ⋅ Social Impact & Tech Innovation
         </p>
-        <Link id="home-cta" to="/projects">
+        <Link className="app-link" id="home-cta" to="/projects">
           See All Projects
         </Link>
       </div>
       <div className="card-list">
         <h2>Featured</h2>
-        <Card
-          cardClass="home-featured"
-          title={title}
-          text={text}
-          firstImg={twiceListing}
-          secondImg={twiceHome}
-        />
+        <Card cardClass="home-featured" project={projects[0]} />
       </div>
     </div>
   );

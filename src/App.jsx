@@ -2,21 +2,22 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavBar from "./components/NavBar";
 import AppRoutes from "./AppRoutes";
-import MenuContext from "./context/MenuContext";
+import ModalContext from "./context/ModalContext";
 import "./stylesheets/App.css";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   const hideMenu = () => setIsOpen(false);
 
   return (
     <>
-      <MenuContext.Provider value={{ isOpen, toggleMenu, hideMenu }}>
+      <ModalContext.Provider value={{ isOpen, toggleMenu, hideMenu, setIsModalOpen, isModalOpen }}>
         <NavBar />
-        <div className={`app ${isOpen ? "menu-open" : ""}`}>
+        <div className={`app ${(isOpen || isModalOpen) ? "open" : ""}`}>
           <main>
             <AppRoutes />
           </main>
@@ -50,7 +51,7 @@ function App() {
             </div>
           </footer>
         </div>
-      </MenuContext.Provider>
+      </ModalContext.Provider>
     </>
   );
 }

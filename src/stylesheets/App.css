@@ -65,7 +65,7 @@ footer {
   font-size: 25px;
 }
 
-.app.menu-open {
+.app.open {
   position: fixed;
   margin-right: 30px;
 }

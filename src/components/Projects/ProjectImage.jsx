@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 import "../../stylesheets/ProjectImage.css"
 
-const ProjectImage = ({ src, alt }) => {
+const ProjectImage = ({ src, alt, setIsModalOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const openPopup = () => setIsOpen(true);
-  const closePopup = () => setIsOpen(false);
+  const openPopup = () => {
+    setIsOpen(true);
+    setIsModalOpen(true);
+    return;
+  };
+  const closePopup = () => {
+    setIsOpen(false);
+    setIsModalOpen(false);
+    return;
+  }
 
   return (
     <div>

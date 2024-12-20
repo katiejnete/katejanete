@@ -1,11 +1,13 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import ProjectImage from "./ProjectImage";
+import ModalContext from "../../context/ModalContext";
 import ProjectsContext from "../../context/ProjectsContext";
 import "../../stylesheets/ProjectPage.css";
 
 const ProjectPage = () => {
   const { name } = useParams();
+  const { setIsModalOpen } = useContext(ModalContext);
   const { projects } = useContext(ProjectsContext);
   const { images, title, text, techStack, features, links } = projects.filter(
     (project) => project.name === name
@@ -18,7 +20,7 @@ const ProjectPage = () => {
         <p>{text}</p>
         <div className="project-images">
           {images.map((image) => (
-            <ProjectImage key={image} src={image} alt={image} />
+            <ProjectImage key={image} src={image} alt={image} setIsModalOpen={setIsModalOpen} />
           ))}
         </div>
       </div>

@@ -18,3 +18,9 @@
     justify-content: center;
     gap: 10px;
 }
+
+@media (max-width: 500px) {
+    .project-images {
+        flex-wrap: wrap;
+    }
+}

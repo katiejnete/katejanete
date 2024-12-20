@@ -9,16 +9,17 @@ const Root = () => {
   const [nightMode, setNightMode] = useState(false);
 
   useEffect(() => {
-    document.getElementById("root").className = nightMode ? "night" : "day";
-  }, [nightMode])
+    document.getElementById("root").className = nightMode ? "night" : "";
+    document.body.className = nightMode ? "night" : "";
+  }, [nightMode]);
 
   return (
-    <NightModeContext.Provider value={{nightMode, setNightMode}}>
-    <StrictMode>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </StrictMode>
+    <NightModeContext.Provider value={{ nightMode, setNightMode }}>
+      <StrictMode>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </StrictMode>
     </NightModeContext.Provider>
   );
 };

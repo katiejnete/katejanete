@@ -19,9 +19,28 @@
     position: absolute;
 }
 
+.navbar-hamburger, .navbar-moon {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+}
+
+.navbar-hamburger:hover, .navbar-moon:hover {
+    color: black;
+}
+
 .navbar-hamburger {
     top: 25px;
     left: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#root.night .navbar-hamburger, #root.night .navbar-moon {
+    color: #8a8a8a;
+}
+
+#root.night .navbar-hamburger:hover, #root.night .navbar-moon:hover {
+    color: #acacac;
 }
 
 .navbar-hamburger img {
@@ -53,6 +72,26 @@
     transform: translateY(100%);
     position: fixed;
     z-index: 2;
+}
+
+#root.night .navbar {
+    background-color: black;
+}
+
+#root.night .navbar-links {
+    background-color: black;
+}
+
+#root.night .navbar-links a::after {
+    background-color: #8a8a8a;
+}
+
+.navbar-moon {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    transition: color 0.3s ease;
 }
 
 .navbar-links.open, .navbar-links.open li {

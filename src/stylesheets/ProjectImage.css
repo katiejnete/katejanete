@@ -1,3 +1,12 @@
+#root.night .project-image-overlay, #root.night .project-image-button {
+    background-color: black;
+    color: #8a8a8a;
+}
+
+#root.night .project-image-button:hover {
+    color: #acacac;
+}
+
 .project-image-overlay {
     position: fixed;
     background-color: #8a8a8a;

@@ -13,9 +13,47 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.night {
+  color: #8a8a8a;
+  background-color: black;
+}
+
 #root.night {
   color: #8a8a8a;
   background-color: black;
+}
+
+#root.night a {
+  color: #8a8a8a;
+  background-color: black;
+  transition: color 0.3s ease;
+}
+
+#root.night a:hover {
+  color: #acacac;
+}
+
+#root.night .app-link {
+  color: #8a8a8a;
+}
+
+#root.night .app-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #8a8a8a;
+  transition: background-color 0.3s ease;
+}
+
+#root.night .app-link:hover {
+  color: #acacac;
+}
+
+#root.night .app-link:hover::after {
+  background-color: #acacac;
 }
 
 a {

@@ -50,10 +50,11 @@ footer {
 
 .app-social-icons {
   display: flex;
+  align-items: center;
 }
 
 .app-social-icon {
-  margin: 10px;
+  margin: 5px;
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -62,10 +63,14 @@ footer {
 }
 
 .app-icon-large {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .app.open {
   position: fixed;
   margin-right: 30px;
+}
+
+#root.night .app.open {
+  background-color: black;
 }

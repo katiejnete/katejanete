@@ -1,6 +1,6 @@
 .project-image-overlay {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #8a8a8a;
     top: 0;
     left: 0;
     width: 100%;
@@ -12,31 +12,47 @@
 }
 
 .project-image-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 80%;
+    overflow-y: auto;
+    width: 80%;
+    height: 80%;
     position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.project-image-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.project-image-box::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
 }
 
 .project-image-box img {
     width: 80%;
     height: auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .project-image-box button {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     padding: 0;
+    width: 35px;
+    box-sizing: content-box;
     margin: 15px;
-    background: none;
-    border: none;
-    color: rgba(0, 0, 0, 0.5);
     font-size: 30px;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #8a8a8a;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .project-image-box button:hover {
     color: black;
+    transform: scale(1.1);
 }

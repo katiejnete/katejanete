@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ProjectImage from "./ProjectImage";
 import ProjectsContext from "../../context/ProjectsContext";
@@ -12,7 +12,7 @@ const ProjectPage = () => {
   )[0];
 
   return (
-    <div className="project">
+    <div className={"project"}>
       <div className="project-intro">
         <h1>{title}</h1>
         <p>{text}</p>

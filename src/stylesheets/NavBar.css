@@ -11,6 +11,10 @@
     position: absolute;
 }
 
+.navbar.modal-open {
+    visibility: hidden;
+}
+
 .navbar-hamburger, .navbar-logo, .navbar-links {
     position: absolute;
 }

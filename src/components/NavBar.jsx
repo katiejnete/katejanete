@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import MenuContext from "../context/MenuContext";
+import ModalContext from "../context/ModalContext";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 import hamburger from "../assets/hamburger.png";
@@ -7,10 +7,10 @@ import x from "../assets/x.png";
 import "../stylesheets/NavBar.css";
 
 const NavBar = () => {
-  const {isOpen, toggleMenu, hideMenu} = useContext(MenuContext);
+  const {isOpen, toggleMenu, hideMenu, isModalOpen} = useContext(ModalContext);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isModalOpen ? "modal-open" : ""}`}>
       <NavLink onClick={hideMenu} to="/">
         <img className="navbar-logo" src={logo} alt="Kate Janete Logo" />
       </NavLink>

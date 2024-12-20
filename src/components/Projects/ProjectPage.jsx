@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
+import ProjectImage from "./ProjectImage";
 import ProjectsContext from "../../context/ProjectsContext";
 import "../../stylesheets/ProjectPage.css";
 
@@ -17,7 +18,7 @@ const ProjectPage = () => {
         <p>{text}</p>
         <div className="project-images">
           {images.map((image) => (
-            <img src={image} alt={image} />
+            <ProjectImage key={image} src={image} alt={image} />
           ))}
         </div>
       </div>
@@ -49,9 +50,7 @@ const ProjectPage = () => {
             </a>
           </li>
           <li>
-            <a className="app-link" key={links[1]} href={links[1]}>
-              View Code on GitHub
-            </a>
+            <p><em>Note: The GitHub repository is private. Access is available upon request via the invite link. Contact me for access.</em></p>
           </li>
         </ul>
       </div>

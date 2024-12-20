@@ -3,12 +3,18 @@
 }
 
 .project img {
-    width: 45%;
+    width: 100%;
     height: auto;
-    margin: 10px;
+    transition: transform 0.2s;
+}
+
+.project-image:hover {
+    cursor: pointer;
+    transform: scale(1.01);
 }
 
 .project-images {
     display: flex;
     justify-content: center;
+    gap: 10px;
 }

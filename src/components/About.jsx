@@ -9,7 +9,7 @@ const About = () => {
         <img src={profileImg} alt="" />
         <section>
           <h2>
-            <strong>Introduction</strong>
+            Introduction
           </h2>
           <p>
             What if we could make every decision in life based on data,
@@ -23,7 +23,7 @@ const About = () => {
       </div>
       <div className="about-journey">
         <h2>
-          <strong>My Journey</strong>
+          My Journey
         </h2>
         <p>
           While studying Mechanical Engineering, I realized that my true calling
@@ -35,7 +35,7 @@ const About = () => {
       </div>
       <div className="passion">
         <h2>
-          <strong>My Passion</strong>
+          My Passion
         </h2>
         <p>
           In addition to building software, I was able to teach kids how to
@@ -48,12 +48,12 @@ const About = () => {
       </div>
       <div className="skills">
         <h2>
-          <strong>Skills and Technical Expertise</strong>
+          Skills and Technical Expertise
         </h2>
         <ul>
           <li>
             Programming Languages & Tools: Python, Node, JavaScript, Flask,
-            React, PostgreSQL, Docker, Git, GitHub
+            React (this portfolio is), PostgreSQL, Docker, Git, GitHub
           </li>
           <li>
             Backend Development: Experience building robust backend systems,
@@ -63,7 +63,7 @@ const About = () => {
       </div>
       <div className="goals">
         <h2>
-          <strong>Future Goals</strong>
+          Future Goals
         </h2>
         <p>
           I'm excited to apply my background and skills to fields like AI and
@@ -72,7 +72,7 @@ const About = () => {
       </div>
       <div className="connect">
         <h2>
-          <strong>Connect With Me</strong>
+          Connect With Me
         </h2>
         <p>
           I'm excited to continue learning, growing, and attacking new

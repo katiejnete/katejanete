@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import MenuContext from "../context/MenuContext";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 import hamburger from "../assets/hamburger.png";
@@ -6,9 +7,7 @@ import x from "../assets/x.png";
 import "../stylesheets/NavBar.css";
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const hideMenu = () => setIsOpen(false);
+  const {isOpen, toggleMenu, hideMenu} = useContext(MenuContext);
 
   return (
     <nav className="navbar">
@@ -29,9 +28,6 @@ const NavBar = () => {
         </li>
         <li>
           <NavLink onClick={hideMenu} to="/projects">Projects</NavLink>{" "}
-        </li>
-        <li>
-          <NavLink onClick={hideMenu} to="/contact">Contact</NavLink>
         </li>
         {/* <NavLink to="/playground">Playground</NavLink> */}
       </ul>

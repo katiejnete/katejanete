@@ -13,6 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root.night {
+  color: #8a8a8a;
+  background-color: black;
+}
+
 a {
   font-weight: 500;
   color: black;

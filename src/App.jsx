@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavBar from "./components/NavBar";
 import AppRoutes from "./AppRoutes";
 import ModalContext from "./context/ModalContext";
+import NightModeContext from "./context/NightModeContext"
 import "./stylesheets/App.css";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-function App() {
-  const [isOpen, setIsOpen] = useState(false);
+function App() {  
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   const hideMenu = () => setIsOpen(false);
 

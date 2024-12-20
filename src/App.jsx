@@ -16,7 +16,7 @@ function App() {
     <>
       <MenuContext.Provider value={{ isOpen, toggleMenu, hideMenu }}>
         <NavBar />
-        <div className={isOpen ? "menu-open" : ""}>
+        <div className={`app ${isOpen ? "menu-open" : ""}`}>
           <main>
             <AppRoutes />
           </main>

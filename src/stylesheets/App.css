@@ -40,3 +40,32 @@
 .read-the-docs {
   color: #888;
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.app-social-icons {
+  display: flex;
+}
+
+.app-social-icon {
+  margin: 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.app-social-icon:hover {
+  color: black;
+}
+
+.app-icon-large {
+  font-size: 25px;
+}
+
+div.menu-open {
+  position: fixed;
+  margin-right: 30px;
+}

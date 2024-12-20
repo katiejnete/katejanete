@@ -4,8 +4,6 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects/Projects";
 import ProjectPage from "./components/Projects/ProjectPage";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
 import NotFound from "./components/NotFound";
 import twiceListing from "./assets/twice-listing.png";
 import twiceHome from "./assets/twice-home.png";
@@ -33,7 +31,7 @@ const AppRoutes = () => {
         "Geolocation features to map item locations.",
         "Save favorite listings for easy access.",
       ],
-      links: ["https://twiceloved-frontend.onrender.com/", "github.com/"],
+      links: ["https://twiceloved-frontend.onrender.com/"],
     },
     {
       name: "edu-skin",
@@ -57,7 +55,7 @@ const AppRoutes = () => {
         "Receive personalized skincare product recommendations.",
         "Submit new products for review and inclusion.",
       ],
-      links: ["https://eduskin.onrender.com/", "github.com/"],
+      links: ["https://eduskin.onrender.com/"],
     },
   ];
   const experiences = [
@@ -102,7 +100,6 @@ const AppRoutes = () => {
           <Route path="/projects/:name" element={<ProjectPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/experience" element={<Experience />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
           {/* <Route path="/playground" /> */}
         </Routes>

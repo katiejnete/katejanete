@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./components/Home";
 import About from "./components/About";
 import Experience from "./components/Experience";
@@ -94,6 +95,7 @@ const AppRoutes = () => {
   return (
     <ProjectsContext.Provider value={{ projects }}>
       <ExperienceContext.Provider value={{ experiences }}>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />

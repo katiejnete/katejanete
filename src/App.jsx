@@ -37,23 +37,25 @@ function App() {
               <a
                 href="https://www.linkedin.com/in/katejanete"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="app-social-icon"
               >
                 <FontAwesomeIcon
                   className="app-icon-large"
                   icon={faLinkedin}
-                  alt="LinkedIn"
+                  aria-label="LinkedIn"
                 />
               </a>
               <a
                 href="mailto:katiejnete@gmail.com"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="app-social-icon"
               >
                 <FontAwesomeIcon
                   className="app-icon-large"
                   icon={faEnvelope}
-                  alt="E-mail"
+                  aria-label="E-mail"
                 />
               </a>
             </div>

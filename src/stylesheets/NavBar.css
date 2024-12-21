@@ -20,22 +20,22 @@
     position: absolute;
 }
 
-.navbar-hamburger:focus-visible, .navbar-moon:focus-visible {
+.navbar-hamburger, .navbar-moon {
     color: rgba(0, 0, 0, 0.5);
     font-size: 20px;
-    transition: color 0.3s ease;
-    outline: 4px solid #646cff;
-    outline-offset: 2px;
+    transition: transform 0.3s ease, color 0.3s ease; 
 }
 
 .navbar-hamburger:hover, .navbar-moon:hover {
     color: black;
+    transform: scale(1.1);
 }
 
 .navbar-hamburger {
     top: 25px;
     left: 15px;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 #root.night .navbar-hamburger, #root.night .navbar-moon {
@@ -75,7 +75,6 @@
     transform: translateY(100%);
     position: fixed;
     z-index: 2;
-    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 #root.night .navbar-links a::after {
@@ -87,6 +86,7 @@
     position: absolute;
     top: 25px;
     right: 15px;
+    transition: color 0.3s ease;
 }
 
 .navbar-links.open, .navbar-links.open li {
@@ -101,12 +101,13 @@
 
 .navbar-links, .navbar-links li {
     opacity: 0;
-    transform: translateY(50px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .navbar-links li {
     list-style: none;
     text-align: left;
+    transform: translateY(50px);
 }
 
 .navbar-links a {
@@ -122,7 +123,7 @@
     width: 0;
     height: 1px;
     background-color: black;
-    transition: width 0.3s ease;
+    transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .navbar-links a:hover::after {
@@ -163,16 +164,14 @@
         display: none;
     }
 
-    .navbar-links a:focus-visible {
+    .navbar-links a {
         text-decoration: none;
         color: rgba(0, 0, 0, 0.5);
         position: relative;
         transition: color 0.3s ease;
         z-index: 0;
-        outline: 4px solid #646cff;
-        outline-offset: 2px;
     }
-
+    
     .navbar-links a::after {
         content: "";
         position: absolute;
@@ -183,11 +182,11 @@
         background-color: rgba(0, 0, 0, 0.5);
         transition: background-color 0.3s ease;
     }
-
+    
     .navbar-links a:hover {
         color: black;
     }
-
+    
     .navbar-links a:hover::after {
         width: 100%;
         background-color: black;

@@ -20,9 +20,12 @@
     position: absolute;
 }
 
-.navbar-hamburger, .navbar-moon {
+.navbar-hamburger:focus-visible, .navbar-moon:focus-visible {
     color: rgba(0, 0, 0, 0.5);
     font-size: 20px;
+    transition: color 0.3s ease;
+    outline: 4px solid #646cff;
+    outline-offset: 2px;
 }
 
 .navbar-hamburger:hover, .navbar-moon:hover {
@@ -33,7 +36,6 @@
     top: 25px;
     left: 15px;
     cursor: pointer;
-    transition: color 0.3s ease;
 }
 
 #root.night .navbar-hamburger, #root.night .navbar-moon {
@@ -73,6 +75,7 @@
     transform: translateY(100%);
     position: fixed;
     z-index: 2;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 #root.night .navbar-links a::after {
@@ -84,7 +87,6 @@
     position: absolute;
     top: 25px;
     right: 15px;
-    transition: color 0.3s ease;
 }
 
 .navbar-links.open, .navbar-links.open li {
@@ -99,13 +101,12 @@
 
 .navbar-links, .navbar-links li {
     opacity: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(50px);
 }
 
 .navbar-links li {
     list-style: none;
     text-align: left;
-    transform: translateY(50px);
 }
 
 .navbar-links a {
@@ -162,14 +163,16 @@
         display: none;
     }
 
-    .navbar-links a {
+    .navbar-links a:focus-visible {
         text-decoration: none;
         color: rgba(0, 0, 0, 0.5);
         position: relative;
         transition: color 0.3s ease;
         z-index: 0;
+        outline: 4px solid #646cff;
+        outline-offset: 2px;
     }
-    
+
     .navbar-links a::after {
         content: "";
         position: absolute;
@@ -180,11 +183,11 @@
         background-color: rgba(0, 0, 0, 0.5);
         transition: background-color 0.3s ease;
     }
-    
+
     .navbar-links a:hover {
         color: black;
     }
-    
+
     .navbar-links a:hover::after {
         width: 100%;
         background-color: black;

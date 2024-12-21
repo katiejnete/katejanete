@@ -137,5 +137,5 @@ button:focus-visible {
 }
 
 a:focus, .app-link:focus {
-  outline: 4px solid #646cff; /* Example focus outline for links */
+  outline: 4px solid #646cff;
 }

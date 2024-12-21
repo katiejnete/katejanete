@@ -74,6 +74,7 @@ footer {
 
 .app {
   box-sizing: border-box;
+  margin: 15px;
   padding: 15px;
   height: 100vh;
   display: flex;

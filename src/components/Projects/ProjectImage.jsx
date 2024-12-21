@@ -21,7 +21,7 @@ const ProjectImage = ({ src, alt, setIsModalOpen }) => {
       {isOpen && (
         <div className="project-image-overlay">
           <div className="project-image-box">
-            <button className="project-image-button" onClick={closePopup}>
+            <button aria-label="close image" className="project-image-button" onClick={closePopup}>
               &times;
             </button>
             <img

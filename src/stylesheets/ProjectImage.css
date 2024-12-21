@@ -1,6 +1,6 @@
 #root.night .project-image-overlay, #root.night .project-image-button {
-    background-color: black;
-    color: #8a8a8a;
+    background-color: #333; 
+    color: #b0b0b0; 
 }
 
 #root.night .project-image-button:hover {
@@ -9,7 +9,7 @@
 
 .project-image-overlay {
     position: fixed;
-    background-color: #8a8a8a;
+    background-color: #333; 
     top: 0;
     left: 0;
     width: 100%;
@@ -43,6 +43,11 @@
 .project-image-box::-webkit-scrollbar-thumb {
     background-color: #555;
     border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.project-image-box::-webkit-scrollbar-thumb:hover {
+    background-color: #888; /* Hover effect for the scrollbar */
 }
 
 .project-image-box img {
@@ -54,9 +59,9 @@
 }
 
 .project-image-box button { 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
     padding: 0; 
     width: 35px; 
     box-sizing: content-box; 
@@ -74,4 +79,15 @@
 .project-image-box button:hover {
     color: black;
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .project-image-box {
+        max-width: 90%; 
+        max-height: 90%;
+    }
+
+    .project-image-box button {
+        font-size: 24px; 
+    }
 }

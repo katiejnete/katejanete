@@ -4,6 +4,7 @@ import "../stylesheets/Experience.css";
 
 const Experience = () => {
   const { experiences } = useContext(ExperienceContext);
+  if (!experiences) return <div>Loading...</div>;
 
   return (
     <div className="experience">

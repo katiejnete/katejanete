@@ -6,6 +6,7 @@ import "../stylesheets/Home.css";
 
 const Home = () => {
   const { projects } = useContext(ProjectsContext);
+  if (!projects) return <div>Loading...</div>;
 
   return (
     <div className="home">

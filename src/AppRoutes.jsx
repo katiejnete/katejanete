@@ -39,7 +39,7 @@ const AppRoutes = () => {
       text: `EduSkin is a web application that allows users to access reliable data about cosmetic products. Built with Flask, it empowers consumers by providing ingredient insights and tailored skincare product recommendations, making informed decisions effortless.`,
       images: [skinHome, skinRecs],
       techStack: [
-        "Scikit-learn",
+        "scikit-learn",
         "K-Nearest Neighbors",
         "Flask",
         "Python",
@@ -101,7 +101,6 @@ const AppRoutes = () => {
           <Route path="/about" element={<About />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="*" element={<NotFound />} />
-          {/* <Route path="/playground" /> */}
         </Routes>
       </ExperienceContext.Provider>
     </ProjectsContext.Provider>

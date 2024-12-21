@@ -70,7 +70,3 @@ footer {
   position: fixed;
   margin-right: 30px;
 }
-
-#root.night .app.open {
-  background-color: black;
-}

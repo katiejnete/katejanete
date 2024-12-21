@@ -74,14 +74,6 @@
     z-index: 2;
 }
 
-#root.night .navbar {
-    background-color: black;
-}
-
-#root.night .navbar-links {
-    background-color: black;
-}
-
 #root.night .navbar-links a::after {
     background-color: #8a8a8a;
 }
@@ -98,6 +90,10 @@
     margin-top: 10px;
     transform: translateY(0);
     opacity: 1;
+}
+
+#root.night .navbar-links.open {
+    background-color: black;
 }
 
 .navbar-links, .navbar-links li {
@@ -137,6 +133,10 @@
         transform: none;
         position: relative;
         order: 0;
+    }
+
+    .navbar-moon {
+        z-index: 3;
     }
 
     .navbar-links {

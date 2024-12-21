@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavBar from "./components/NavBar";
 import AppRoutes from "./AppRoutes";
 import ModalContext from "./context/ModalContext";
-import NightModeContext from "./context/NightModeContext"
 import "./stylesheets/App.css";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";

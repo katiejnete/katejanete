@@ -95,8 +95,6 @@ a {
 html, body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
 }
 
 h1, h2 {
@@ -110,11 +108,11 @@ h1:first-of-type, h2:first-of-type {
 }
 
 h1 {
-  font-size: 1.5rem; /* Consider using rem for scalability */
+  font-size: 1.5rem; 
 }
 
 h2 {
-  font-size: 1.25rem; /* Consider using rem for scalability */
+  font-size: 1.25rem; 
 }
 
 button {
@@ -136,4 +134,8 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+a:focus, .app-link:focus {
+  outline: 4px solid #646cff; /* Example focus outline for links */
 }

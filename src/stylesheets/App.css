@@ -46,11 +46,12 @@ footer {
 .app-social-icon {
   margin: 5px;
   color: rgba(0, 0, 0, 0.5);
-  transition: color 0.3s ease; 
+  transition: transform 0.3s ease, color 0.3s ease; 
 }
 
 .app-social-icon:hover {
   color: black;
+  transform: scale(1.1);
 }
 
 .app-icon-large {

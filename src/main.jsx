@@ -14,13 +14,13 @@ const Root = () => {
   }, [nightMode]);
 
   return (
-    <NightModeContext.Provider value={{ nightMode, setNightMode }}>
-      <StrictMode>
+    <StrictMode>
+      <NightModeContext.Provider value={{ nightMode, setNightMode }}>
         <BrowserRouter>
           <App />
         </BrowserRouter>
-      </StrictMode>
-    </NightModeContext.Provider>
+      </NightModeContext.Provider>
+    </StrictMode>
   );
 };
 

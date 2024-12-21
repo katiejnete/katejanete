@@ -5,3 +5,7 @@
 h3 {
     font-weight: 500;
 }
+
+main .experience h2 {
+    margin-top: 20px;
+}

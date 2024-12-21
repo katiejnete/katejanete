@@ -16,3 +16,7 @@
     display: flex;
     justify-content: space-between;
 }
+
+main .about h2 {
+    margin-top: 20px;
+}

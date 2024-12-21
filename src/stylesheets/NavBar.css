@@ -1,15 +1,17 @@
 .navbar {
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: auto;
+    width: 100%;
+    min-height: 60px;
+    background-color: #8a8a8a;
     margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
-    position: absolute;
-    z-index: 1;
+    position: fixed;
+    z-index: 1000;
+}
+
+.navbar.night {
+    background-color: black;
 }
 
 .navbar.modal-open {

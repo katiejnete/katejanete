@@ -17,7 +17,7 @@ const NavBar = () => {
   const handleNightMode = () => setNightMode(!nightMode);
 
   return (
-    <nav className={`navbar ${isModalOpen ? "modal-open" : ""}`}>
+    <nav className={`navbar ${isModalOpen ? "modal-open" : ""} ${nightMode ? "night" : ""}`}>
       <NavLink onClick={hideMenu} to="/">
         <img className="navbar-logo" src={nightMode ? logoNight : logo} alt="Kate Janete Logo" />
       </NavLink>

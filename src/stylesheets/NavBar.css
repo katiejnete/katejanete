@@ -9,6 +9,7 @@
     justify-content: space-between;
     align-items: flex-start;
     position: absolute;
+    z-index: 1;
 }
 
 .navbar.modal-open {

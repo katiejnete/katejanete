@@ -1,5 +1,7 @@
 .project {
     text-align: left;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .project img {
@@ -16,11 +18,25 @@
 .project-images {
     display: flex;
     justify-content: center;
+    width: 100%;
     gap: 10px;
 }
 
-@media (max-width: 500px) {
+.project-images img {
+    max-width: 85%;
+}
+
+.project-images .project-image-box img {
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
     .project-images {
         flex-wrap: wrap;
     }
+}
+
+.project-image-div {
+    display: flex;
+    justify-content: center;
 }

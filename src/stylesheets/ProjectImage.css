@@ -23,6 +23,7 @@
 .project-image-box {
     overflow-y: auto;
     display: flex;
+    justify-content: center;
     align-items: flex-start;
     max-width: 80%;
     max-height: 80%;

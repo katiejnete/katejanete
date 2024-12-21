@@ -7,17 +7,25 @@ import "./stylesheets/App.css";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-function App() {  
+function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const hideMenu = () => setIsOpen(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const hideMenu = () => setIsMenuOpen(false);
 
   return (
     <>
-      <ModalContext.Provider value={{ isOpen, toggleMenu, hideMenu, setIsModalOpen, isModalOpen }}>
+      <ModalContext.Provider
+        value={{
+          isMenuOpen,
+          toggleMenu,
+          hideMenu,
+          setIsModalOpen,
+          isModalOpen,
+        }}
+      >
         <NavBar />
-        <div className={`app ${(isOpen || isModalOpen) ? "open" : ""}`}>
+        <div className={`app ${isMenuOpen || isModalOpen ? "open" : ""}`}>
           <main>
             <AppRoutes />
           </main>

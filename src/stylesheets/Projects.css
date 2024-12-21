@@ -6,12 +6,13 @@
 
 .card.projects {
     padding: 0;
-    width: 100%;
+    width: 85%;
     box-sizing: border-box;
 }
 
 .card-list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }

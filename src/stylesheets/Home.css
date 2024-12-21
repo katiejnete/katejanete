@@ -30,6 +30,7 @@
 
 .card.home-featured {
     padding: 0;
+    max-width: 85%;
 }
 
 h2, p {

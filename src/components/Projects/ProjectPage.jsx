@@ -35,7 +35,7 @@ const ProjectPage = () => {
       </div>
 
       <div className="project-app-features">
-        <h2>App Features:</h2>
+        <h2>App Features</h2>
         <ul>
           {features.map((feature) => (
             <li key={feature}>{feature}</li>

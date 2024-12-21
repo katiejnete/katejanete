@@ -15,7 +15,7 @@ const ProjectImage = ({ src, alt, setIsModalOpen }) => {
   }
 
   return (
-    <div>
+    <div className="project-image-div">
       <img className="project-image" onClick={openPopup} src={src} alt={alt} />
 
       {isOpen && (

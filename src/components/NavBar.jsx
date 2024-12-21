@@ -11,7 +11,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
-  const { isOpen, toggleMenu, hideMenu, isModalOpen } =
+  const { isMenuOpen, toggleMenu, hideMenu, isModalOpen } =
     useContext(ModalContext);
   const { nightMode, setNightMode } = useContext(NightModeContext);
   const handleNightMode = () => setNightMode(!nightMode);
@@ -27,10 +27,10 @@ const NavBar = () => {
       </div>
 
       <div className="navbar-hamburger" onClick={toggleMenu}>
-        {isOpen ? <FontAwesomeIcon icon={faX}/> : <FontAwesomeIcon icon={faBars}/>} 
+        {isMenuOpen ? <FontAwesomeIcon icon={faX}/> : <FontAwesomeIcon icon={faBars}/>} 
       </div>
 
-      <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
+      <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
         <li>
           <NavLink onClick={hideMenu} to="/about">
             About Me

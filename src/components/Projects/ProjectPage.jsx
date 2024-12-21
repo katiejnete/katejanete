@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import ProjectImage from "./ProjectImage";
 import ModalContext from "../../context/ModalContext";
 import ProjectsContext from "../../context/ProjectsContext";
@@ -7,8 +7,21 @@ import "../../stylesheets/ProjectPage.css";
 
 const ProjectPage = () => {
   const { name } = useParams();
-  const { setIsModalOpen } = useContext(ModalContext);
+  const navigate = useNavigate();
   const { projects } = useContext(ProjectsContext);
+  
+  const projectExists = projects.find((project) => project.name === name);
+console.log(projectExists);
+  useEffect(() => {
+    if (!projectExists) {
+      navigate("/not-found", {replace: true});
+    }
+  }, [projectExists, navigate])
+
+  if (!projectExists) return null;
+
+  const { setIsModalOpen } = useContext(ModalContext);
+
   const { images, title, text, techStack, features, links } = projects.filter(
     (project) => project.name === name
   )[0];
@@ -20,7 +33,12 @@ const ProjectPage = () => {
         <p>{text}</p>
         <div className="project-images">
           {images.map((image) => (
-            <ProjectImage key={image} src={image} alt={image} setIsModalOpen={setIsModalOpen} />
+            <ProjectImage
+              key={image}
+              src={image}
+              alt={image}
+              setIsModalOpen={setIsModalOpen}
+            />
           ))}
         </div>
       </div>
@@ -52,7 +70,12 @@ const ProjectPage = () => {
             </a>
           </li>
           <li>
-            <p><em>Note: The GitHub repository is private. Access is available upon request via the invite link. Contact me for access.</em></p>
+            <p>
+              <em>
+                Note: The GitHub repository is private. Access is available upon
+                request via the invite link. Contact me for access.
+              </em>
+            </p>
           </li>
         </ul>
       </div>

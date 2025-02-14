@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./components/Home";
 import About from "./components/About";
+import TechContent from "./components/TechContent";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects/Projects";
 import ProjectPage from "./components/Projects/ProjectPage";
@@ -101,6 +102,7 @@ const AppRoutes = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:name" element={<ProjectPage />} />
           <Route path="/about" element={<About />} />
+          <Route path="/tech-content" element={<TechContent />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

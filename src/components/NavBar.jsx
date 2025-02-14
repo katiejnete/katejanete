@@ -37,6 +37,11 @@ const NavBar = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink onClick={hideMenu} to="/tech-content">
+            Tech Content
+          </NavLink>
+        </li>
+        <li>
           <NavLink onClick={hideMenu} to="/experience">
             Relevant Experience
           </NavLink>

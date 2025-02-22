@@ -47,8 +47,8 @@ const About = () => {
         <ul>
           <li>
             Programming Languages & Tools: Python, Node, JavaScript, Flask,
-            React (this portfolio is made with React), PostgreSQL, TypeScript,
-            Git, GitHub, Docker
+            React (I made this portfolio with React), PostgreSQL, TypeScript,
+            Git, GitHub, Docker, Django, SQLite
           </li>
           <li>
             Backend Development: Experience building robust backend systems,

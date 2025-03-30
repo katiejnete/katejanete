@@ -1,8 +1,9 @@
-# React + Vite
+### Hi, I'm Kate
+💻 Full-Stack Software Engineer | API Integrations | Full-Stack  
+Tech Content Creator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔹 Passionate about building clean, efficient code  
+🔹 Experience with React, Flask, SQL, and APIs
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📌 Check out my portfolio! [Portfolio](https://katejanete.onrender.com/)
+📫 Connect with me on [LinkedIn](https://www.linkedin.com/in/katejanete/)

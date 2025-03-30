@@ -1,5 +1,5 @@
 ### Hi, I'm Kate
-💻 Full-Stack Software Engineer | API Integrations | Full-Stack  
+Full-Stack Software Engineer | API Integrations | Full-Stack  
 Tech Content Creator
 
 🔹 Passionate about building clean, efficient code  
